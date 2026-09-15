@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingPal.Pages.MyIngredientsPage"
+               Title="🛒 My Ingredients"
+             BackgroundColor="#1C1C1E"
+             Padding="20">
+
+
+    <VerticalStackLayout Spacing="25">
+        <Label Text="Select Your Ingredients:"
+               FontSize="22"
+               TextColor="#FFCDD2"
+               FontFamily="CursiveFont"
+               HorizontalOptions="Center">
+            
+        </Label>
+        <Label
+             Text="Tick the ingredients you currently have at home. We'll help you find recipes using them!"
+    TextColor="#CCCCCC"
+    FontSize="14"
+    HorizontalOptions="Center"
+    HorizontalTextAlignment="Center"
+    Margin="10,0,10,0">
+            
+        </Label>
+        <CollectionView x:Name="IngredientList" ItemsSource="{Binding AllIngredients}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="#2C2C2E" CornerRadius="12" Padding="10" Margin="0,5" HasShadow="True">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="{Binding IsSelected}" Color="#FF4081" />
+                            <Label Text="{Binding ItemName}" TextColor="White" FontSize="16" Margin="10,0,0,0"/>
+                        </StackLayout>
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button 
+            Text="Continue"
+            Clicked="OnSaveClicked"
+            BackgroundColor="#FF4081"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="50"
+            HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+</ContentPage>

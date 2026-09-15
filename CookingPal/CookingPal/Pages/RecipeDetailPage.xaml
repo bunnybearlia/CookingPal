@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingPal.Pages.RecipeDetailPage"
+              Title="Recipe Details"
+             BackgroundColor="#fff5e1"
+             Padding="20">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15">
+            <Label x:Name="RecipeNameLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#126A5A">
+                
+            </Label>
+            <Label Text="Ingredients:"
+                   FontSize="18"
+                   FontAttributes="Bold" 
+                   TextColor="Black">
+            </Label>
+            <Label x:Name="IngredientsLabel"
+                   FontSize="16"
+                   TextColor="Black">
+                
+            </Label>
+            <Label Text="Instructions:"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   Margin="10"
+                   TextColor="Black">
+                
+            </Label>
+            <Label  x:Name="InstructionsLabel"
+                   FontSize="16"
+                   TextColor="Black">
+                
+            </Label>
+            <Button Text="Back"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#cccccc"
+                    TextColor="Black"
+                    CornerRadius="12">
+                
+            </Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

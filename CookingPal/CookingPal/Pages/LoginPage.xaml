@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingPal.Pages.LoginPage"
+             Title="Login"
+             Padding="30"
+             BackgroundColor="#f2dea1">
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="30"   Padding="30"  >
+            <Grid HeightRequest="220" BackgroundColor="#126a5a" Padding="20"  >
+                <Label 
+                 Text="Welcome to CookingPal" TextColor="White" FontSize="45" FontAttributes="Bold" >
+                </Label>
+                
+
+            </Grid>
+
+            <VerticalStackLayout Spacing="15">
+                <Frame BackgroundColor="White" CornerRadius="12" Padding="10" HasShadow="True">
+                    <HorizontalStackLayout>
+                        <Entry x:Name="EmailEntry" Placeholder="Email" FontSize="16" TextColor="Black">
+
+                        </Entry>
+                    </HorizontalStackLayout>
+
+                </Frame>
+
+                <Frame BackgroundColor="White" CornerRadius="12" Padding="10" HasShadow="True" >
+                    <HorizontalStackLayout>
+                        <Entry 
+                     x:Name="PasswordEntry" Placeholder="Password" FontSize="16" TextColor="Black"  IsPassword="True">
+
+                        </Entry>
+                    </HorizontalStackLayout>
+
+                </Frame>
+
+                
+                <Button  x:Name="btnLogin"
+        Text="Login"
+        BackgroundColor="#126A5A"
+        TextColor="White"
+        CornerRadius="20"
+        FontAttributes="Bold"
+        FontSize="18"
+        Clicked="OnLoginClicked">
+                </Button>
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label
+                     Text="Don't have an account" FontSize="14"  >
+
+                    </Label>
+                    <Label
+                     Text="Sign up" FontSize="14" TextColor="#126A5A" FontAttributes="Bold">
+                        <Label.GestureRecognizers >
+                         <TapGestureRecognizer Tapped="OnSignUpTapped">
+                             
+                         </TapGestureRecognizer>
+                     </Label.GestureRecognizers>
+
+                    </Label>
+
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingPal.Pages.WhatCanICookPage"
+             Title="What Can I Cook?"
+             BackgroundColor="#fff5e1"
+             Padding="20">
+    <VerticalStackLayout Spacing="20">
+        <Picker x:Name="MealTypePicker"
+        Title="Filter by Meal Type"
+        SelectedIndexChanged="OnMealTypeSelected"
+        BackgroundColor="White"
+        TextColor="Black">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>All</x:String>
+                    <x:String>Breakfast</x:String>
+                    <x:String>Lunch</x:String>
+                    <x:String>Dinner</x:String>
+                </x:Array>
+
+            </Picker.ItemsSource>
+
+        </Picker>
+        <Label Text="✅ You Can Make"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Green">
+            
+        </Label>
+        <CollectionView x:Name="CanCookList"
+                        SelectionMode="Single"
+                SelectionChanged="OnRecipeSelected"
+                ItemsSource="{Binding Recipes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" Padding="10" Margin="0,5">
+                        <Label Text="{Binding RecipeName}" FontSize="16" TextColor="Black">
+                        </Label>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+  
+    </VerticalStackLayout>
+</ContentPage>

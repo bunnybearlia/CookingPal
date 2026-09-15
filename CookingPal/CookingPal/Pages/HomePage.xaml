@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingPal.Pages.HomePage"
+            Title="🍽️ CookingPal"
+             BackgroundColor="#FFF5E1">
+    <ScrollView>
+        
+        <VerticalStackLayout Spacing="25" VerticalOptions="Center">
+            <Label
+                Text="Welcome back 👩‍🍳"
+                   FontSize="28"
+                   FontFamily="CursiveFont"
+                   TextColor="#D85C66"
+                   HorizontalOptions="Center"></Label>
+            <Frame BackgroundColor="#ADD8A6" CornerRadius="20" Padding="15" HasShadow="True">
+                <Button Text="🥦 My Ingredients"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        Clicked="OnMyIngredientsClicked">
+
+            </Button>
+            </Frame>
+            <Frame BackgroundColor="#FFB84D" CornerRadius="20" Padding="15" HasShadow="True">
+                <Button Text="🍲 What Can I Cook?"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        Clicked="OnWhatCanICookClicked">
+
+
+            </Button>
+            </Frame>
+            <Frame BackgroundColor="#FFDB58" CornerRadius="20" Padding="15" HasShadow="True">
+                <Button Text="📖 All Recipes"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        Clicked="OnAllRecipesClicked">
+
+            </Button>
+            </Frame>
+            <Frame BackgroundColor="#C94C4C" CornerRadius="20" Padding="15" HasShadow="True">
+                <Button Text="🚪 Logout"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Clicked="OnLogoutClicked">
+                
+            </Button>
+            </Frame>
+           
+            
+            
+           
+            
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
